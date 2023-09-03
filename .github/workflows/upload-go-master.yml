@@ -29,7 +29,7 @@ jobs:
         with:
           piper-version: master
           command: githubPublishRelease
-          flags: --token ${{ secrets.GITHUB_TOKEN }} --version latest --assetPath ./piper_master
+          flags: --token ${{ secrets.GH_TOKEN }} --version latest --assetPath ./piper_master
       - env:
           CGO_ENABLED: 0
           GOOS: darwin
@@ -45,7 +45,7 @@ jobs:
         with:
           piper-version: master
           command: githubPublishRelease
-          flags: --token ${{ secrets.GITHUB_TOKEN }} --version latest --assetPath ./piper_master-darwin.x86_64
+          flags: --token ${{ secrets.GH_TOKEN }} --version latest --assetPath ./piper_master-darwin.x86_64
       - env:
           CGO_ENABLED: 0
           GOOS: darwin
@@ -61,7 +61,7 @@ jobs:
         with:
           piper-version: master
           command: githubPublishRelease
-          flags: --token ${{ secrets.GITHUB_TOKEN }} --version latest --assetPath ./piper_master-darwin.arm64
+          flags: --token ${{ secrets.GH_TOKEN }} --version latest --assetPath ./piper_master-darwin.arm64
       - env:
           CGO_ENABLED: 0
           GOOS: windows
@@ -77,4 +77,4 @@ jobs:
         with:
           piper-version: master
           command: githubPublishRelease
-          flags: --token ${{ secrets.GITHUB_TOKEN }} --version latest --assetPath ./piper_master-win.x86_64.exe
+          flags: --token ${{ secrets.GH_TOKEN }} --version latest --assetPath ./piper_master-win.x86_64.exe
